@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.5
+    driver_config:
+      box: chef/centos-6.5
+      network:
+      - ["forwarded_port", {guest: 5000, host: 5000}]
+      customize:
+        cpus: 2
+        memory: 3024
+        cpuexecutioncap: 100
+
+suites:
+  - name: default
+    run_list:
+      - recipe[resource-manager::default]
+    attributes:
