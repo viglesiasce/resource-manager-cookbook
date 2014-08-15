@@ -16,6 +16,7 @@ python_pip "Flask"
 python_pip "Flask-Bootstrap"
 python_pip "eve"
 python_pip "PrettyTable"
+python_pip "requests"
 
 install_path = '/root/DeploymentManager'
 resource_manager_path = "#{install_path}/resource_manager"
