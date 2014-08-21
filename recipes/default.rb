@@ -11,6 +11,7 @@ include_recipe "supervisor"
 
 package 'git'
 package 'python-setuptools'
+package 'gcc'
 
 python_pip "Flask"
 python_pip "Flask-Bootstrap"
